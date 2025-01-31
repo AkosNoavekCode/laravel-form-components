@@ -1,0 +1,26 @@
+{
+    "name": "akosnoavek/laravel-form-components",
+    "type": "library",
+    "license": "./licence",
+    "autoload": {
+        "psr-4": {
+            "Akosnoavek\\LaravelFormComponents\\": "src/"
+        }
+    },
+    "minimum-stability": "dev",
+    "require": {
+        "php": "^8.3",
+        "illuminate/support": "^11.0",
+        "symfony/http-foundation": "*"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Akosnoavek\\LaravelFormComponents\\src\\Support"
+            ],
+            "aliases": {
+                "Debugbar": "Akosnoavek\\LaravelFormComponents\\Facade"
+            }
+        }
+    }
+}
