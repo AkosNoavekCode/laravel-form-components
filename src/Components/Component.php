@@ -17,6 +17,6 @@ class Component extends BaseComponent
 
     public function id()
     {
-        return base64_encode(random_int(0, 9999) . $this->id);
+        return base64_encode(random_int(0, 9999) . isset($this->name) ? $this->name : null);
     }
 }
