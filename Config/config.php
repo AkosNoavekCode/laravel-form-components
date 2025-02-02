@@ -44,8 +44,8 @@ return [
     //        'class' => Components\FormSelect::class,
     //    ],
 
-       'form-submit' => [
-           'view'  => 'form-components::'.$framework.'.form-submit',
+       'submit' => [
+           'view'  => 'form-components::'.$framework.'.submit',
            'class' => Submit::class,
        ],
 
