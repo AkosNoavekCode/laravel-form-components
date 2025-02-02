@@ -6,8 +6,11 @@ use AkosNoavek\LaravelFormComponents\Components\Component;
 
 class TextInput extends Component
 {
-    public function render(): string
-    {
-        return view('laravel-form-components::text-input');
+    public function __construct
+    (
+        public string $name,
+        public string $label
+    ){
+        $this->id = $this->id();
     }
 }
