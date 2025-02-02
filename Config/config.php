@@ -1,12 +1,17 @@
 <?php
 
+use Akosnoavek\LaravelFormComponents\Components\Radio;
+use Akosnoavek\LaravelFormComponents\Components\Range;
+use Akosnoavek\LaravelFormComponents\Components\Submit;
+use Akosnoavek\LaravelFormComponents\Components\Checkbox;
+use Akosnoavek\LaravelFormComponents\Components\Textarea;
 use Akosnoavek\LaravelFormComponents\Components\TextInput;
 
 
 return [
     'prefix' => '',
 
-    'frontend' => 'bootstrap',
+    'frontend' => $framework = 'bootstrap',
 
     'use_eloquent_date_casting' => false,
 
@@ -14,70 +19,39 @@ return [
     'default_wire' => false,
 
     'components' => [
-//        'form' => [
-//            'view'  => 'form-components::{framework}.form',
-//            'class' => Components\Form::class,
-//        ],
-//
-//        'form-checkbox' => [
-//        'view'  => 'form-components::{framework}.form-checkbox',
-//        'class' => Components\FormCheckbox::class,
-//        ],
-//
-//        'form-errors' => [
-//        'view'  => 'form-components::{framework}.form-errors',
-//        'class' => Components\FormErrors::class,
-//        ],
-//
-//        'form-group' => [
-//        'view'  => 'form-components::{framework}.form-group',
-//        'class' => Components\FormGroup::class,
-//        ],
+       'checkbox' => [
+            'view'  => 'form-components::' . $framework . '.checkbox',
+            'class' => Checkbox::class,
+       ],
 
         'text-input' => [
-            'view'  => 'form-components::{frontend}.text-input',
+            'view'  => 'form-components::'.$framework.'.text-input',
             'class' => TextInput::class,
         ],
 
-//
-//        'form-input-group' => [
-//        'view'  => 'form-components::{framework}.form-input-group',
-//        'class' => Components\FormInputGroup::class,
-//        ],
-//
-//        'form-input-group-text' => [
-//        'view'  => 'form-components::{framework}.form-input-group-text',
-//        'class' => Components\FormInputGroupText::class,
-//        ],
-//
-//        'form-label' => [
-//        'view'  => 'form-components::{framework}.form-label',
-//        'class' => Components\FormLabel::class,
-//        ],
-//
-//        'form-radio' => [
-//            'view'  => 'form-components::{framework}.form-radio',
-//            'class' => Components\FormRadio::class,
-//        ],
-//
-//        'form-range' => [
-//            'view'  => 'form-components::{framework}.form-range',
-//            'class' => Components\FormRange::class,
-//        ],
-//
-//        'form-select' => [
-//            'view'  => 'form-components::{framework}.form-select',
-//            'class' => Components\FormSelect::class,
-//        ],
-//
-//        'form-submit' => [
-//            'view'  => 'form-components::{framework}.form-submit',
-//            'class' => Components\FormSubmit::class,
-//        ],
-//
-//        'form-textarea' => [
-//            'view'  => 'form-components::{framework}.form-textarea',
-//            'class' => Components\FormTextarea::class,
-//        ],
+       'radio' => [
+           'view'  => 'form-components::'.$framework.'.radio',
+           'class' => Radio::class,
+       ],
+
+       'range' => [
+           'view'  => 'form-components::'.$framework.'.range',
+           'class' => Range::class,
+       ],
+
+    //    'form-select' => [
+    //        'view'  => 'form-components::{framework}.form-select',
+    //        'class' => Components\FormSelect::class,
+    //    ],
+
+       'form-submit' => [
+           'view'  => 'form-components::'.$framework.'.form-submit',
+           'class' => Submit::class,
+       ],
+
+       'textarea' => [
+           'view'  => 'form-components::'.$framework.'.textarea',
+           'class' => Textarea::class,
+       ],
     ],
 ];
