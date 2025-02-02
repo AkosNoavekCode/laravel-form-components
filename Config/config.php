@@ -6,6 +6,8 @@ use Akosnoavek\LaravelFormComponents\Components\TextInput;
 return [
     'prefix' => '',
 
+    'frontend' => 'bootstrap',
+
     'use_eloquent_date_casting' => false,
 
     /** bool | string */
@@ -33,7 +35,7 @@ return [
 //        ],
 
         'text-input' => [
-            'view'  => 'form-components::text-input',
+            'view'  => 'form-components::{frontend}.text-input',
             'class' => TextInput::class,
         ],
 
