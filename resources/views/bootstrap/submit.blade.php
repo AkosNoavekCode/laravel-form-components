@@ -1,3 +1,3 @@
 <div>
-  <button type="submit" id="{{ $id }}" class="btn"> </button>
+  <button type="submit" id="{{ $id }}" class="btn">{!! $slot !!}</button>
 </div>
