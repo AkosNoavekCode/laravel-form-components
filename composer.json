@@ -16,7 +16,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Akosnoavek\\LaravelFormComponents\\src\\Support"
+                "Akosnoavek\\LaravelFormComponents\\src\\Support\\ServiceProvider"
             ],
             "aliases": {
                 "Debugbar": "Akosnoavek\\LaravelFormComponents\\Facade"
