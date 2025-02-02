@@ -3,8 +3,10 @@
 namespace AkosNoavek\LaravelFormComponents;
 
 use Illuminate\Support\Str;
+use Illuminate\View\Component as BaseComponent;
 
-class Component 
+
+class Component extends BaseComponent
 {
     public string $name;
 
