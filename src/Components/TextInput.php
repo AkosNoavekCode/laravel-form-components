@@ -2,7 +2,7 @@
 
 namespace Akosnoavek\LaravelFormComponents\Components;
 
-use AkosNoavek\LaravelFormComponents\Component;
+use AkosNoavek\LaravelFormComponents\Components\Component;
 
 class TextInput extends Component
 {

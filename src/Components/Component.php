@@ -1,6 +1,6 @@
 <?php
 
-namespace AkosNoavek\LaravelFormComponents;
+namespace AkosNoavek\LaravelFormComponents\Components;
 
 use Illuminate\Support\Str;
 use Illuminate\View\Component as BaseComponent;
