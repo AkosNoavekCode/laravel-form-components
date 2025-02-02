@@ -4,7 +4,7 @@ namespace AkosNoavek\LaravelFormComponents;
 
 use Illuminate\Support\Str;
 
-class Component
+class Component 
 {
     public string $name;
 

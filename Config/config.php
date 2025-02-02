@@ -32,7 +32,7 @@ return [
 //        'class' => Components\FormGroup::class,
 //        ],
 
-        'form-input' => [
+        'text-input' => [
             'view'  => 'form-components::text-input',
             'class' => TextInput::class,
         ],
