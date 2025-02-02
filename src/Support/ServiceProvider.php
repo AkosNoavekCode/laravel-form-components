@@ -1,6 +1,9 @@
 <?php
 
+namespace AkosNoavek\LaravelFormComponents\Support; 
+    
 use \Illuminate\Support\ServiceProvider as BaseServiceProvider;
+
 class ServiceProvider extends BaseServiceProvider
 {
     /**
