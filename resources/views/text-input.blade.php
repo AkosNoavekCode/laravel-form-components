@@ -1,3 +1,3 @@
 <div>
-    <input type="text" >
+    <input type="text" label="{{ $this->label }}">
 </div>

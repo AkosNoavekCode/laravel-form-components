@@ -1,6 +1,6 @@
 <?php
 
-use ProtoneMedia\LaravelFormComponents\Components;
+use AkosNoavek\LaravelFormComponents\TextInput;
 
 return [
     'prefix' => '',
@@ -35,8 +35,8 @@ return [
 //        ],
 
         'form-input' => [
-            'view'  => 'form-components::{framework}.text-input',
-            'class' => Components\TextInput::class,
+            'view'  => 'form-components::text-input',
+            'class' => TextInput::class,
         ],
 
 //
