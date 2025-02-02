@@ -1,7 +1,10 @@
 <?php
 
 namespace Akosnoavek\LaravelFormComponents\Components;
-class TextInput
+
+use AkosNoavek\LaravelFormComponents\Component;
+
+class TextInput extends Component
 {
     public function render(): string
     {
