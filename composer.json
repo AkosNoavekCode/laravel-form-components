@@ -1,7 +1,7 @@
 {
     "name": "akosnoavek/laravel-form-components",
     "type": "library",
-    "license": "./licence",
+    "license": "MIT",
     "autoload": {
         "psr-4": {
             "Akosnoavek\\LaravelFormComponents\\": "src/"
