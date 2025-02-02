@@ -9,6 +9,7 @@ use Illuminate\View\Component as BaseComponent;
 class Component extends BaseComponent
 {
     public string $id;
+    public string $name = '';
 
     public function render()
     {
