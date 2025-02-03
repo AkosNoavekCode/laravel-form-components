@@ -1,7 +1,9 @@
 <?php
 
+use Akosnoavek\LaravelFormComponents\Components\FormGroup;
 use Akosnoavek\LaravelFormComponents\Components\Radio;
 use Akosnoavek\LaravelFormComponents\Components\Range;
+use Akosnoavek\LaravelFormComponents\Components\Select;
 use Akosnoavek\LaravelFormComponents\Components\Submit;
 use Akosnoavek\LaravelFormComponents\Components\Checkbox;
 use Akosnoavek\LaravelFormComponents\Components\Textarea;
@@ -39,10 +41,15 @@ return [
            'class' => Range::class,
        ],
 
-    //    'form-select' => [
-    //        'view'  => 'form-components::{framework}.form-select',
-    //        'class' => Components\FormSelect::class,
-    //    ],
+        'form-group' => [
+            'view'  => 'form-components::'.$framework.'.form-group',
+            'class' => FormGroup::class,
+        ],
+
+        'select' => [
+            'view'  => 'form-components::'. $framework .'.select',
+            'class' => Select::class,
+        ],
 
        'submit' => [
            'view'  => 'form-components::'.$framework.'.submit',
@@ -54,4 +61,9 @@ return [
            'class' => Textarea::class,
        ],
     ],
+
+    //Api endpoint with the related model to fetch on the select component
+    'api' => [
+        'example.route' => '\App\Models\ExampleClass'
+    ]
 ];
