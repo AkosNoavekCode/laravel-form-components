@@ -4,7 +4,7 @@ use Akosnoavek\LaravelFormComponents\Components\FormCheckbox;
 use Akosnoavek\LaravelFormComponents\Components\FormGroup;
 use Akosnoavek\LaravelFormComponents\Components\Radio;
 use Akosnoavek\LaravelFormComponents\Components\Range;
-use Akosnoavek\LaravelFormComponents\Components\Select;
+use Akosnoavek\LaravelFormComponents\Components\FormSelect;
 use Akosnoavek\LaravelFormComponents\Components\Submit;
 use Akosnoavek\LaravelFormComponents\Components\FormInput;
 use Akosnoavek\LaravelFormComponents\Components\Textarea;
@@ -45,9 +45,9 @@ return [
             'class' => FormGroup::class,
         ],
 
-        'select' => [
-            'view'  => 'form-components::' . $framework . '.select',
-            'class' => Select::class,
+        'form-select' => [
+            'view'  => 'form-components::' . $framework . '.form-select',
+            'class' => FormSelect::class,
         ],
 
         'submit' => [

@@ -4,10 +4,9 @@ namespace Akosnoavek\LaravelFormComponents\Components;
 
 use AkosNoavek\LaravelFormComponents\Components\Component;
 
-class Select extends Component
+class FormSelect extends Component
 {
-    public function __construct
-    (
+    public function __construct(
         public string $name,
         public mixed $value = null,
         public string $label = '',
@@ -18,8 +17,7 @@ class Select extends Component
         public bool $multiple = false,
         public ?int $maxOptions = null,
         public $defaultOption = null,
-    ){
+    ) {
         $this->id = $this->id();
     }
-
 }
