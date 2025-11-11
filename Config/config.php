@@ -2,7 +2,7 @@
 
 use Akosnoavek\LaravelFormComponents\Components\FormCheckbox;
 use Akosnoavek\LaravelFormComponents\Components\FormGroup;
-use Akosnoavek\LaravelFormComponents\Components\Radio;
+use Akosnoavek\LaravelFormComponents\Components\FormRadio;
 use Akosnoavek\LaravelFormComponents\Components\Range;
 use Akosnoavek\LaravelFormComponents\Components\FormSelect;
 use Akosnoavek\LaravelFormComponents\Components\Submit;
@@ -30,9 +30,9 @@ return [
             'class' => FormInput::class,
         ],
 
-        'radio' => [
-            'view'  => 'form-components::' . $framework . '.radio',
-            'class' => Radio::class,
+        'form-radio' => [
+            'view'  => 'form-components::' . $framework . '.form-radio',
+            'class' => FormRadio::class,
         ],
 
         'range' => [
