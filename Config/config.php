@@ -7,7 +7,7 @@ use Akosnoavek\LaravelFormComponents\Components\Select;
 use Akosnoavek\LaravelFormComponents\Components\Submit;
 use Akosnoavek\LaravelFormComponents\Components\Checkbox;
 use Akosnoavek\LaravelFormComponents\Components\Textarea;
-use Akosnoavek\LaravelFormComponents\Components\TextInput;
+use Akosnoavek\LaravelFormComponents\Components\FormInput;
 
 
 return [
@@ -21,45 +21,45 @@ return [
     'default_wire' => false,
 
     'components' => [
-       'checkbox' => [
+        'checkbox' => [
             'view'  => 'form-components::' . $framework . '.checkbox',
             'class' => Checkbox::class,
-       ],
-
-        'text-input' => [
-            'view'  => 'form-components::'.$framework.'.text-input',
-            'class' => TextInput::class,
         ],
 
-       'radio' => [
-           'view'  => 'form-components::'.$framework.'.radio',
-           'class' => Radio::class,
-       ],
+        'text-input' => [
+            'view'  => 'form-components::' . $framework . '.form-input',
+            'class' => FormInput::class,
+        ],
 
-       'range' => [
-           'view'  => 'form-components::'.$framework.'.range',
-           'class' => Range::class,
-       ],
+        'radio' => [
+            'view'  => 'form-components::' . $framework . '.radio',
+            'class' => Radio::class,
+        ],
+
+        'range' => [
+            'view'  => 'form-components::' . $framework . '.range',
+            'class' => Range::class,
+        ],
 
         'form-group' => [
-            'view'  => 'form-components::'.$framework.'.form-group',
+            'view'  => 'form-components::' . $framework . '.form-group',
             'class' => FormGroup::class,
         ],
 
         'select' => [
-            'view'  => 'form-components::'. $framework .'.select',
+            'view'  => 'form-components::' . $framework . '.select',
             'class' => Select::class,
         ],
 
-       'submit' => [
-           'view'  => 'form-components::'.$framework.'.submit',
-           'class' => Submit::class,
-       ],
+        'submit' => [
+            'view'  => 'form-components::' . $framework . '.submit',
+            'class' => Submit::class,
+        ],
 
-       'textarea' => [
-           'view'  => 'form-components::'.$framework.'.textarea',
-           'class' => Textarea::class,
-       ],
+        'textarea' => [
+            'view'  => 'form-components::' . $framework . '.textarea',
+            'class' => Textarea::class,
+        ],
     ],
 
     //Api endpoint with the related model to fetch on the select component
