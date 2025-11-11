@@ -1,13 +1,13 @@
 <?php
 
+use Akosnoavek\LaravelFormComponents\Components\FormCheckbox;
 use Akosnoavek\LaravelFormComponents\Components\FormGroup;
 use Akosnoavek\LaravelFormComponents\Components\Radio;
 use Akosnoavek\LaravelFormComponents\Components\Range;
 use Akosnoavek\LaravelFormComponents\Components\Select;
 use Akosnoavek\LaravelFormComponents\Components\Submit;
-use Akosnoavek\LaravelFormComponents\Components\Checkbox;
+use Akosnoavek\LaravelFormComponents\Components\FormInput;
 use Akosnoavek\LaravelFormComponents\Components\Textarea;
-use Akosnoavek\LaravelFormComponents\Components\Input;
 
 return [
     'prefix' => '',
@@ -20,14 +20,14 @@ return [
     'default_wire' => false,
 
     'components' => [
-        'checkbox' => [
-            'view'  => 'form-components::' . $framework . '.checkbox',
-            'class' => Checkbox::class,
+        'form-checkbox' => [
+            'view'  => 'form-components::' . $framework . '.form-checkbox',
+            'class' => FormCheckbox::class,
         ],
 
         'form-input' => [
-            'view'  => 'form-components::' . $framework . '.input',
-            'class' => Input::class,
+            'view'  => 'form-components::' . $framework . '.form-input',
+            'class' => FormInput::class,
         ],
 
         'radio' => [
