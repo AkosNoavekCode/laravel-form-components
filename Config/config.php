@@ -7,8 +7,7 @@ use Akosnoavek\LaravelFormComponents\Components\Select;
 use Akosnoavek\LaravelFormComponents\Components\Submit;
 use Akosnoavek\LaravelFormComponents\Components\Checkbox;
 use Akosnoavek\LaravelFormComponents\Components\Textarea;
-use Akosnoavek\LaravelFormComponents\Components\FormInput;
-
+use Akosnoavek\LaravelFormComponents\Components\Input;
 
 return [
     'prefix' => '',
@@ -26,9 +25,9 @@ return [
             'class' => Checkbox::class,
         ],
 
-        'text-input' => [
-            'view'  => 'form-components::' . $framework . '.form-input',
-            'class' => FormInput::class,
+        'form-input' => [
+            'view'  => 'form-components::' . $framework . '.input',
+            'class' => Input::class,
         ],
 
         'radio' => [

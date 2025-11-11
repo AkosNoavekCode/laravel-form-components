@@ -1,6 +1,6 @@
 <?php
 
-namespace AkosNoavek\LaravelFormComponents\Support; 
+namespace AkosNoavek\LaravelFormComponents\Support;
 
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Blade;
@@ -12,7 +12,7 @@ class ServiceProvider extends BaseServiceProvider
      * Bootstrap the application services.
      */
     public function boot(): void
-    {       
+    {
         if ($this->app->runningInConsole()) {
             $this->publishes([
                 __DIR__ . '/../../Config/config.php' => config_path('form-components.php'),
@@ -25,30 +25,11 @@ class ServiceProvider extends BaseServiceProvider
 
         $this->loadViewsFrom(__DIR__ . '/../../resources/views', 'form-components');
 
-//        //
-//
-//        Blade::directive('bind', function ($bind) {
-/*            return '<?php app(\ProtoneMedia\LaravelFormComponents\FormDataBinder::class)->bind(' . $bind . '); ?>';*/
-//        });
-//
-//        Blade::directive('endbind', function () {
-/*            return '<?php app(\ProtoneMedia\LaravelFormComponents\FormDataBinder::class)->pop(); ?>';*/
-//        });
-//
-//        Blade::directive('wire', function ($modifier) {
-/*            return '<?php app(\ProtoneMedia\LaravelFormComponents\FormDataBinder::class)->wire(' . $modifier . '); ?>';*/
-//        });
-//
-//        Blade::directive('endwire', function () {
-/*            return '<?php app(\ProtoneMedia\LaravelFormComponents\FormDataBinder::class)->endWire(); ?>';*/
-//        });
-
-        //
 
         $prefix = config('form-components.prefix');
 
         Collection::make(config('form-components.components'))->each(
-            fn ($component, $alias) => Blade::component($alias, $component['class'], $prefix)
+            fn($component, $alias) => Blade::component($alias, $component['class'], $prefix)
         );
     }
 
@@ -59,6 +40,6 @@ class ServiceProvider extends BaseServiceProvider
     {
         $this->mergeConfigFrom(__DIR__ . '/../../Config/config.php', 'form-components');
 
-//        $this->app->singleton(FormDataBinder::class, fn () => new FormDataBinder);
+        //        $this->app->singleton(FormDataBinder::class, fn () => new FormDataBinder);
     }
 }
