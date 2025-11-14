@@ -2,6 +2,7 @@
 
 namespace AkosNoavek\LaravelFormComponents\Components;
 
+use AkosNoavek\LaravelFormComponents\FormDataBinder;
 use Illuminate\Support\Str;
 use Illuminate\View\Component as BaseComponent;
 
