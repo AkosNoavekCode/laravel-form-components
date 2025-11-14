@@ -2,7 +2,7 @@
 
 namespace AkosNoavek\LaravelFormComponents\Support;
 
-use AkosNoavek\LaravelFormComponents\FormDataBinder;
+use AkosNoavek\LaravelFormComponents\Helpers\FormDataBinder;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Blade;
 use \Illuminate\Support\ServiceProvider as BaseServiceProvider;
@@ -27,19 +27,19 @@ class ServiceProvider extends BaseServiceProvider
     $this->loadViewsFrom(__DIR__ . '/../../resources/views', 'form-components');
 
     Blade::directive('bind', function ($bind) {
-      return '<?php app(\AkosNoavek\LaravelFormComponents\FormDataBinder::class)->bind(' . $bind . '); ?>';
+      return '<?php app(\AkosNoavek\LaravelFormComponents\Helpers\FormDataBinder::class)->bind(' . $bind . '); ?>';
     });
 
     Blade::directive('endbind', function () {
-      return '<?php app(\AkosNoavek\LaravelFormComponents\FormDataBinder::class)->pop(); ?>';
+      return '<?php app(\AkosNoavek\LaravelFormComponents\Helpers\FormDataBinder::class)->pop(); ?>';
     });
 
     Blade::directive('wire', function ($modifier) {
-      return '<?php app(\AkosNoavek\LaravelFormComponents\FormDataBinder::class)->wire(' . $modifier . '); ?>';
+      return '<?php app(\AkosNoavek\LaravelFormComponents\Helpers\FormDataBinder::class)->wire(' . $modifier . '); ?>';
     });
 
     Blade::directive('endwire', function () {
-      return '<?php app(\AkosNoavek\LaravelFormComponents\FormDataBinder::class)->endWire(); ?>';
+      return '<?php app(\AkosNoavek\LaravelFormComponents\Helpers\FormDataBinder::class)->endWire(); ?>';
     });
 
 

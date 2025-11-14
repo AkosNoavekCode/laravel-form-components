@@ -1,6 +1,6 @@
 <?php
 
-namespace AkosNoavek\LaravelFormComponents;
+namespace AkosNoavek\LaravelFormComponents\Helpers;
 
 use Illuminate\Support\Arr;
 
