@@ -2,6 +2,7 @@
 
 namespace AkosNoavek\LaravelFormComponents\Support;
 
+use AkosNoavek\LaravelFormComponents\FormDataBinder;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Blade;
 use \Illuminate\Support\ServiceProvider as BaseServiceProvider;
