@@ -102,7 +102,9 @@
                 class="my-2 border-bottom input-hidden form-select "
                 name="{{$name}}"
                 id="select{{ $id }}"
-                @if($multiple) multiple @endif>
+                @if($multiple) multiple @endif
+                {{$attributes}}
+                >
             <option value=""></option>
             @if(!$fetch && $options)
                 @foreach($options as $value => $option)
