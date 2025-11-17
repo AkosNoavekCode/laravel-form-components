@@ -89,6 +89,10 @@
                 @if($fetch and !empty($defaultValue))
                     window.tom{{$id}}.addOption({'{{ $searchKey }}': '{{ $defaultValue?->{$searchKey} }}', '{{ $searchField }}': `{{ $value?->{$searchField} }}`});
                     window.tom{{$id}}.setValue(`{{$defaultValue?->{$searchKey} }}`);
+                @elseif(empty($defaultValue))
+                    setTimeout(function(){
+                        window.tom{{$id}}.setValue(@this.get('{{$name}}'));
+                    }, 500)
                 @endif
             }
         },
@@ -123,4 +127,7 @@
             })
         })
     </script>
+    @error($name)
+      <span class="error">{{$message}}</span>
+    @enderror
 </div>
