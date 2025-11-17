@@ -103,7 +103,7 @@
                 name="{{$name}}"
                 id="select{{ $id }}"
                 @if($multiple) multiple @endif
-                {{$attributes}}
+                {!! $attributes !!}
                 >
             <option value=""></option>
             @if(!$fetch && $options)
