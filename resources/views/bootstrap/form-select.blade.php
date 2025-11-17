@@ -112,6 +112,8 @@
                         {{ $option }}
                     </option>
                 @endforeach
+            @elseif(!$fetch && empty($options))
+                {!! $slot !!}
             @endif
         </select>
     </div>
