@@ -2,7 +2,6 @@
 
 namespace AkosNoavek\LaravelFormComponents\Components;
 
-use AkosNoavek\LaravelFormComponents\Helpers\FormDataBinder;
 use Illuminate\Support\Str;
 use Illuminate\View\Component as BaseComponent;
 
@@ -12,15 +11,6 @@ class Component extends BaseComponent
   public string $id;
 
   public string $name = '';
-
-  public function isWired(): bool
-  {
-    if ($this->attributes && count($this->attributes->whereStartsWith('wire:model')->getIterator())) {
-      return false;
-    }
-
-    return app(FormDataBinder::class)->isWired();
-  }
 
   public function render()
   {

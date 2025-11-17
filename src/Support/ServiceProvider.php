@@ -2,7 +2,6 @@
 
 namespace AkosNoavek\LaravelFormComponents\Support;
 
-use AkosNoavek\LaravelFormComponents\Helpers\FormDataBinder;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Blade;
 use \Illuminate\Support\ServiceProvider as BaseServiceProvider;
@@ -26,23 +25,6 @@ class ServiceProvider extends BaseServiceProvider
 
     $this->loadViewsFrom(__DIR__ . '/../../resources/views', 'form-components');
 
-    Blade::directive('bind', function ($bind) {
-      return '<?php app(\AkosNoavek\LaravelFormComponents\Helpers\FormDataBinder::class)->bind(' . $bind . '); ?>';
-    });
-
-    Blade::directive('endbind', function () {
-      return '<?php app(\AkosNoavek\LaravelFormComponents\Helpers\FormDataBinder::class)->pop(); ?>';
-    });
-
-    Blade::directive('wire', function ($modifier) {
-      return '<?php app(\AkosNoavek\LaravelFormComponents\Helpers\FormDataBinder::class)->wire(' . $modifier . '); ?>';
-    });
-
-    Blade::directive('endwire', function () {
-      return '<?php app(\AkosNoavek\LaravelFormComponents\Helpers\FormDataBinder::class)->endWire(); ?>';
-    });
-
-
     $prefix = config('form-components.prefix');
 
     Collection::make(config('form-components.components'))->each(
@@ -56,7 +38,5 @@ class ServiceProvider extends BaseServiceProvider
   public function register(): void
   {
     $this->mergeConfigFrom(__DIR__ . '/../../Config/config.php', 'form-components');
-
-    $this->app->singleton(FormDataBinder::class, fn() => new FormDataBinder);
   }
 }
