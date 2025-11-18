@@ -1,7 +1,7 @@
 <div wire:key={{$id}}>
-    <div class="mb-3 form-floating">
-        <input class="form-control" id="{{ $id }}" placeholder="{{$label}}" wire:model="{{$name}}"  {!! $attributes !!}/>
+    <div class="mb-3">
         <label for="{{ $id }}">{{ $label }}</label>
+        <input class="form-control" id="{{ $id }}" wire:model="{{$name}}"  {!! $attributes !!}/>
         @error($name)
             <span class="error">{{$message}}</span>
         @enderror
