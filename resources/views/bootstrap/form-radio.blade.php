@@ -24,11 +24,12 @@
     @endscript
 
     @error($name)
-        <div error_id="error-{{$id_old}}">
-          </br>
-          <span x-init='
-            window.check_error_messages("error-{{$id_old}}")
-          ' class="error">{{$message}}</span>
+        <div style="position: relative" error_id="error-{{$id_old}}">
+            <br>
+              <span x-init='
+                window.check_error_messages("error-{{$id_old}}")
+              ' class="error" style="position: absolute; top:0; width: 200px">{{$message}}</span>
+            </br>
         </div>
     @enderror
 </div>
