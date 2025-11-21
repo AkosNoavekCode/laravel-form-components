@@ -10,7 +10,7 @@
 	"minimum-stability": "dev",
 	"require": {
 		"php": "^8.2",
-		"illuminate/support": "^11.0",
+		"illuminate/support": "*",
 		"symfony/http-foundation": "*"
 	},
 	"extra": {
