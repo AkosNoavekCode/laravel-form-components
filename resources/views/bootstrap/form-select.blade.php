@@ -31,8 +31,10 @@
                         select_val = el.parentElement.previousElementSibling.value
                         if(select_val !== null && select_val !== ''){
                             el.classList.add('p-0')
+                            el.classList.add('ps-2')
                         }else{
                             el.classList.add('p-0')
+                            el.classList.add('ps-2')
                             el.classList.remove('py-3')
                         }
                         el.parentElement.style.setProperty('margin', '0px', 'important');
@@ -78,6 +80,7 @@
                             }else{
                                 el.classList.remove('p-2')
                                 el.classList.add('p-0')
+                                el.classList.add('ps-2')
                             }
                             el.classList.remove('pb-4');
                         })
