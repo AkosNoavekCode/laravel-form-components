@@ -62,7 +62,7 @@
                     return this.value = value;
                 },
                 closeAfterSelect: true,
-                create: true,
+                create: false,
                 sortField: {
                     field: 'text',
                     direction: 'asc'
