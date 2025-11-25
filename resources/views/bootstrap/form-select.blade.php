@@ -22,13 +22,26 @@
 <div>
 
     {{-- Select  --}}
-    <div class="select-wrapper" wire:ignore>
+    <div wire:ignore>
         <label for="select{{ $id }}">{{ $label }}</label>
         <select
+            x-init="
+                    elements = document.querySelectorAll('.ts-control')
+                    elements.forEach(function (el) {
+                        select_val = el.parentElement.previousElementSibling.value
+                        if(select_val !== null && select_val !== ''){
+                            el.classList.add('p-0')
+                        }else{
+                            el.classList.add('p-0')
+                            el.classList.remove('py-3')
+                        }
+                        el.parentElement.style.setProperty('margin', '0px', 'important');
+                        el.classList.remove('pb-4');
+                    })
+            "
+
                 x-data="{
        init() {
-                window.logThis;
-
           var settings = {
                 @if(!empty($maxOptions))
                     maxOptions: {{$maxOptions}},
@@ -42,7 +55,7 @@
                 @endif
                 onItemAdd: function(value, item) {
                     if(! this.dropdown.classList.contains('multi')){
-                        this.control.classList.add('py-3');
+                        this.control.classList.add('p-2');
                     };
                     return this.value = value;
                 },
@@ -60,9 +73,11 @@
                         elements.forEach(function (el) {
                             select_val = el.parentElement.previousElementSibling.value
                             if(select_val !== null && select_val !== ''){
-                                el.classList.add('py-3')
+                                el.classList.remove('p-0')
+                                el.classList.add('p-2')
                             }else{
-                                el.classList.remove('py-3')
+                                el.classList.remove('p-2')
+                                el.classList.add('p-0')
                             }
                             el.classList.remove('pb-4');
                         })
@@ -76,6 +91,9 @@
                     options: [],
                     load: function (query, callback) {
                     var self = this;
+                    self.classList.add('p-2')
+                    console.log(self)
+
                     if (self.loading > 1) {
                         callback();
                         return;
