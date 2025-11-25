@@ -42,7 +42,7 @@
                 @endif
                 onItemAdd: function(value, item) {
                     if(! this.dropdown.classList.contains('multi')){
-                        this.control.classList.add('pb-4');
+                        this.control.classList.add('py-3');
                     };
                     return this.value = value;
                 },
@@ -53,7 +53,21 @@
                     direction: 'asc'
                 },
                 onChange(value) {
-                    @this.set('{{$name}}', value)
+                    try{
+                        @this.set('{{$name}}', value)
+
+                        elements = document.querySelectorAll('.ts-control')
+                        elements.forEach(function (el) {
+                            select_val = el.parentElement.previousElementSibling.value
+                            if(select_val !== null && select_val !== ''){
+                                el.classList.add('py-3')
+                            }else{
+                                el.classList.remove('py-3')
+                            }
+                            el.classList.remove('pb-4');
+                        })
+                    }catch(e){
+                    }
                 },
                 @if($fetch)
                     valueField: 'id',
@@ -67,7 +81,6 @@
                         return;
                     }
                     var url = '{{$fetch}}?search=' + encodeURIComponent(query);
-                    console.log(url);
                     fetch(url, {
                             method: 'GET',
                             headers: {
