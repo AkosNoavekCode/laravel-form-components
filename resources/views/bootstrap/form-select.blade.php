@@ -45,6 +45,12 @@
                 x-data="{
        init() {
           var settings = {
+                onDropdownOpen(value)
+                {
+                    tom = this
+                    setTimeout(function(){tom.control_input.placeholder = ' Search... '}, 100)
+                },
+
                 @if(!empty($maxOptions))
                     maxOptions: {{$maxOptions}},
                 @endif
