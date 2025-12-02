@@ -61,6 +61,7 @@
                     };
                     return this.value = value;
                 },
+                placeholder: ' Search ',
                 closeAfterSelect: true,
                 create: false,
                 sortField: {
